@@ -24,10 +24,10 @@ function randomPick(){
 	do {
 		x = Math.floor((Math.random() * 9));
 		y = Math.floor((Math.random() * 9));
-	} while( pos[x][y].style.background === 'red' || (x === xt && y===yt) );
+	} while( pos[x][y].style.backgroundColor === 'red' || (x === xt && y===yt) );
 	xt = x;
 	yt = y;
-	pos[x][y].style.background = 'orange';
+	pos[x][y].style.backgroundColor = 'orange';
 }
 
 function goRight(){
@@ -38,13 +38,13 @@ function goRight(){
 
 	c = (c < pos[r].length-1)? c+1 : 0;
 
-	if (pos[r][c].style.background === 'red'){
+	if (pos[r][c].style.backgroundColor === 'red'){
 		document.getElementById("demo").style.display = 'block';
 		document.getElementById("playerScore").innerHTML = score;
 		clearInterval(timer);
 	}
 	
-	if (pos[r][c].style.background === 'orange'){
+	if (pos[r][c].style.backgroundColor === 'orange'){
 		score = score + 1;
 		inter = inter - 10;
 		randomPick();
@@ -52,15 +52,15 @@ function goRight(){
 
    	for (var k=0; k< pos[r].length; k++){
    		for (var t=0; t< pos[r].length; t++){
-			pos[k][t].style.background = 'green';   			
+			pos[k][t].style.backgroundColor = 'green';   			
    		}
    	}
-   	pos[r][c].style.background = 'red';
+   	pos[r][c].style.backgroundColor = 'red';
 
-   	pos[x][y].style.background = 'orange';
+   	pos[x][y].style.backgroundColor = 'orange';
 
    	for (s = score; s > 0; s--){
-   		niz[s-1].style.background = 'red';
+   		niz[s-1].style.backgroundColor = 'red';
    	}
 }
 
@@ -72,13 +72,13 @@ function goLeft(){
 
 	c = (c > 0)? c-1 : pos[r].length-1;
 
-	if (pos[r][c].style.background === 'red'){
+	if (pos[r][c].style.backgroundColor === 'red'){
 		document.getElementById("demo").style.display = 'block';
 		document.getElementById("playerScore").innerHTML = score;
 		clearInterval(timer);
 	}
 
-	if (pos[r][c].style.background === 'orange'){
+	if (pos[r][c].style.backgroundColor === 'orange'){
 		score = score + 1;
 		inter = inter - 10;
 		randomPick();
@@ -86,15 +86,15 @@ function goLeft(){
 
    	for (var k=0; k< pos[r].length; k++){
    		for (var t=0; t< pos[r].length; t++){
-			pos[k][t].style.background = 'green';   			
+			pos[k][t].style.backgroundColor = 'green';   			
    		}
    	}
-   	pos[r][c].style.background = 'red';
+   	pos[r][c].style.backgroundColor = 'red';
 
-   	pos[x][y].style.background = 'orange';
+   	pos[x][y].style.backgroundColor = 'orange';
 
    	for (s = score; s > 0; s--){
-   		niz[s-1].style.background = 'red';
+   		niz[s-1].style.backgroundColor = 'red';
    	}
 }
 
@@ -106,13 +106,13 @@ function goDown(){
 
 	r = (r < pos[c].length-1)? r+1 : 0;
 
-	if (pos[r][c].style.background === 'red'){
+	if (pos[r][c].style.backgroundColor === 'red'){
 		document.getElementById("demo").style.display = 'block';
 		document.getElementById("playerScore").innerHTML = score;
 		clearInterval(timer);
 	}
 
-	if (pos[r][c].style.background === 'orange'){
+	if (pos[r][c].style.backgroundColor === 'orange'){
 		score = score + 1;
 		inter = inter - 10;
 		randomPick();
@@ -120,15 +120,15 @@ function goDown(){
 
    	for (var k=0; k< pos[r].length; k++){
    		for (var t=0; t< pos[r].length; t++){
-			pos[k][t].style.background = 'green';   			
+			pos[k][t].style.backgroundColor = 'green';   			
    		}
    	}
-   	pos[r][c].style.background = 'red';
+   	pos[r][c].style.backgroundColor = 'red';
 
-   	pos[x][y].style.background = 'orange';
+   	pos[x][y].style.backgroundColor = 'orange';
 
    	for (s = score; s > 0; s--){
-   		niz[s-1].style.background = 'red';
+   		niz[s-1].style.backgroundColor = 'red';
    	}
 }
 
@@ -140,13 +140,13 @@ function goUp(){
 
 	r = (r > 0)? r-1 : pos[c].length-1;
 
-	if (pos[r][c].style.background === 'red'){
+	if (pos[r][c].style.backgroundColor === 'red'){
 		document.getElementById("demo").style.display = 'block';
 		document.getElementById("playerScore").innerHTML = score;
 		clearInterval(timer);
 	}
 
-	if (pos[r][c].style.background === 'orange'){
+	if (pos[r][c].style.backgroundColor === 'orange'){
 		score = score + 1;
 		inter = inter - 10;
 		randomPick();
@@ -154,15 +154,15 @@ function goUp(){
 
    	for (var k=0; k< pos[r].length; k++){
    		for (var t=0; t< pos[r].length; t++){
-			pos[k][t].style.background = 'green';   			
+			pos[k][t].style.backgroundColor = 'green';   			
    		}
    	}
-   	pos[r][c].style.background = 'red';
+   	pos[r][c].style.backgroundColor = 'red';
 
-   	pos[x][y].style.background = 'orange';
+   	pos[x][y].style.backgroundColor = 'orange';
 
    	for (s = score; s > 0; s--){
-   		niz[s-1].style.background = 'red';
+   		niz[s-1].style.backgroundColor = 'red';
    	}
 }
 
